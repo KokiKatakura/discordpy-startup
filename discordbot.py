@@ -9,7 +9,7 @@ import string
 import datetime
 
 # 接続に必要なオブジェクトを生成
-client = discord.Client()
+#client = discord.Client()
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -35,6 +35,14 @@ def GetRandomStr(num = 4):
 
 @bot.command()
 async def project(ctx):
+    # 日付取得
+    y = 0
+    today = datetime.date.today()
+    y = today.strftime("%Y%m%d")
+    # ランダムな英数字取得
+    z = 0
+    num = 4
+    z = GetRandomStr(num)
     await ctx.send('あなたのプロジェクトのプロジェクトIDは%s%sです。' % (y,z))
     await ctx.send('下記URLにアクセスしてOKRのフォームを埋めてください。')
     await ctx.send('https://forms.gle/D1RHXmdNaZwbXhsP7')
