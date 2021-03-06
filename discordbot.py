@@ -43,8 +43,8 @@ async def project(ctx):
     z = 0
     num = 4
     z = GetRandomStr(num)
-    await ctx.send('あなたのプロジェクトのプロジェクトIDは%s%sです。' % (y,z))
-    await ctx.send('下記URLにアクセスしてOKRのフォームを埋めてください。')
+    #await ctx.send('あなたのプロジェクトのプロジェクトIDは%s%sです。' % (y,z))
+    #await ctx.send('下記URLにアクセスしてOKRのフォームを埋めてください。')
     await ctx.send('https://forms.gle/D1RHXmdNaZwbXhsP7')
     
 
