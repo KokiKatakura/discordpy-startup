@@ -18,9 +18,5 @@ async def on_command_error(ctx, error):
 async def ping(ctx):
     await ctx.send('pong')
 
-@bot.command()
-async def project(ctx):
-    await ctx.send('下記URLにアクセスしてOKRのフォームを埋めてください。')
-
 
 bot.run(token)
