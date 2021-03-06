@@ -16,7 +16,7 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def project(ctx):
-    await ctx.send('project')
+    await ctx.send('下記URLにアクセスしてOKRのフォームを埋めてください。')
 
 
 bot.run(token)
