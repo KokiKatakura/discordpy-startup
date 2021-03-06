@@ -3,7 +3,7 @@ import os
 import traceback
 
 # インストールした discord.py を読み込む
-import discord
+#import discord
 import random
 import string
 import datetime
