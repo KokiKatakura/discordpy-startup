@@ -3,7 +3,7 @@ import os
 import traceback
 
 # インストールした discord.py を読み込む
-#import discord
+import discord
 import random
 import string
 import datetime
@@ -33,8 +33,14 @@ def GetRandomStr(num = 4):
      # 英数字からランダムに取得
      return ''.join([random.choice(dat) for i in range(num)])
 
+# 起動時に動作する処理
+@client.event
+async def on_ready():
+    # 起動したらターミナルにログイン通知が表示される
+    print('ログインしました')
+
 # メッセージ受信時に動作する処理
-@bot.event
+@client.event.event
 async def on_message(message, number = 1):
     # メッセージ送信者がBotだった場合は無視する
     if message.author.bot:
