@@ -10,9 +10,19 @@ import random
 import string
 import datetime
 
+# 接続に必要なオブジェクトを生成
+client = discord.Client()
+
 bot = commands.Bot(command_prefix='/')
 
 token = os.environ['DISCORD_BOT_TOKEN']
+
+# ランダムな英数字を取得する関数
+def GetRandomStr(num = 4):
+     # 英数字をすべて取得
+     dat = string.digits + string.ascii_lowercase + string.ascii_uppercase
+     # 英数字からランダムに取得
+     return ''.join([random.choice(dat) for i in range(num)])
 
 @bot.event
 async def on_command_error(ctx, error):
