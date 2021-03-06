@@ -32,6 +32,15 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def project(ctx):
+    # 日付取得
+    y = 0
+    today = datetime.date.today()
+    y = today.strftime("%Y%m%d")
+    # ランダムな英数字取得
+    z = 0
+    num = 4
+    z = GetRandomStr(num)
+    await ctx.send('あなたのプロジェクトのプロジェクトIDは%s%sです。' % (y,z))
     await ctx.send('下記URLにアクセスしてOKRのフォームを埋めてください。')
     await ctx.send('https://forms.gle/D1RHXmdNaZwbXhsP7')
 
