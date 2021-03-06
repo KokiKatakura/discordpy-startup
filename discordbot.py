@@ -34,7 +34,7 @@ def GetRandomStr(num = 4):
      return ''.join([random.choice(dat) for i in range(num)])
 
 # メッセージ受信時に動作する処理
-@client.event
+@bot.event
 async def on_message(message, number = 1):
     # メッセージ送信者がBotだった場合は無視する
     if message.author.bot:
