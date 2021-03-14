@@ -44,5 +44,8 @@ async def project(ctx):
     await ctx.send('下記URLにアクセスしてOKRのフォームを埋めてください。')
     await ctx.send('https://forms.gle/D1RHXmdNaZwbXhsP7')
 
+@client.event
+async def on_member_join(member):
+    await ctx.send('はじめまして')
 
 bot.run(token)
